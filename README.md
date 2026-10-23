@@ -2,10 +2,7 @@
 
 Aplikasi **SIKopDes (Sistem Informasi Koperasi Desa Merah Biru)** - Modul **KD1: Keanggotaan dan Simpanan** adalah platform full-stack terintegrasi yang dirancang untuk mengelola siklus operasional keanggotaan warga desa dan transaksi simpanan secara akuntabel, transparan, dan otomatis.
 
-- **Nama Mahasiswa**: Raihan Maulana Heriandry
-- **NPM**: 2406351024
-- **Kelas**: APAP-C
-- **Tech Stack**:
+**Tech Stack**:
   - **Back-End**: Java 25, Spring Boot 4.x, Spring Data JPA, Hibernate, PostgreSQL 16
   - **Front-End**: Vue 3 (Composition API / `<script setup>`), Vite, TypeScript, Bootstrap 5, Chart.js, Axios
   - **DevOps / Database**: Docker & Docker Compose
@@ -52,8 +49,7 @@ flowchart LR
 
 ```
 sikopdes-2406351024/
-├── docker-compose.yaml             # Orkestrasi container PostgreSQL 16
-├── TI_SIKD1_2406351024.zip         # Berkas submisi SCeLE berisi executable SIKD12406351024.jar
+├── docker-compose.yaml             # container PostgreSQL 16
 ├── README.md                       # Dokumentasi utama proyek tingkat root
 │
 ├── sikopdes-2406351024-be/         # [BACK-END] Spring Boot 4 & Java 25
@@ -62,10 +58,10 @@ sikopdes-2406351024/
 │   │   ├── main/
 │   │   │   ├── java/apap/ti/_6/sikopdes_2406351024_be/
 │   │   │   │   ├── config/         # Konfigurasi CORS (CorsConfig.java)
-│   │   │   │   ├── controller/     # 6 REST API Controllers
+│   │   │   │   ├── controller/     # REST API Controllers
 │   │   │   │   ├── dto/            # Request payloads & Response objects
 │   │   │   │   ├── exception/      # Centralized GlobalExceptionHandler & custom exceptions
-│   │   │   │   ├── model/          # JPA Entities (Anggota, Simpanan, Riwayat, Pemeriksaan)
+│   │   │   │   ├── model/          # JPA Entities
 │   │   │   │   ├── repository/     # Spring Data JPA Repositories
 │   │   │   │   ├── scheduler/      # Background evaluation job (@Scheduled)
 │   │   │   │   ├── seeder/         # Inisialisasi data realistis berbasis DataFaker
@@ -74,33 +70,32 @@ sikopdes-2406351024/
 │   │   │   └── resources/
 │   │   │       └── application.yaml # Konfigurasi Spring, import .env, datasource
 │   │   └── test/                   # Integration & unit test suites
-│   ├── .env                        # Environment variables lokal (DB credentials)
-│   ├── .gitignore                  # Mengabaikan .env, build/, .gradle, IDE files
-│   ├── build.gradle                # Definisi dependensi & build task bootJar
-│   ├── gradlew / gradlew.bat       # Wrapper script Gradle
-│   └── README.md                   # Dokumentasi detail Back-End & Endpoints
+│   ├── .gitignore                  
+│   ├── build.gradle                
+│   ├── gradlew / gradlew.bat       
+│   └── README.md                   
 │
 └── sikopdes-2406351024-fe/         # [FRONT-END] Vue 3, Vite, TypeScript
-    ├── public/                     # Aset publik statis
+    ├── public/                     
     ├── src/
     │   ├── __tests__/              # Unit test komponen dengan Vitest
-    │   ├── components/             # Reusable UI component (Navbar.vue)
-    │   ├── router/                 # Vue Router (13 rute halaman)
+    │   ├── components/             # Reusable UI component
+    │   ├── router/                 # Vue Router
     │   ├── services/               # Axios HTTP Client instance
     │   ├── utils/                  # Formatter tanggal & mata uang Rupiah
-    │   ├── views/                  # 13 Halaman tampilan terkelompok modular:
+    │   ├── views/                  
     │   │   ├── anggota/            # List, Detail, Create, Update Anggota
     │   │   ├── riwayat/            # List & Detail Riwayat Status
     │   │   ├── simpanan/           # List, Detail, Pokok, Wajib/Sukarela, Kepatuhan
     │   │   ├── statistik/          # Chart.js Visualisasi Tren & Distribusi
     │   │   └── HomeView.vue        # Dashboard Beranda & ringkasan operasional
     │   ├── App.vue                 # Root Single Page Component
-    │   └── main.ts                 # Inisialisasi aplikasi Vue
-    ├── eslint.config.ts            # Konfigurasi ESLint & Oxlint
-    ├── package.json                # Dependensi npm & skrip dev/build/test
-    ├── tsconfig.json               # Konfigurasi TypeScript
-    ├── vite.config.ts              # Konfigurasi bundler Vite
-    └── README.md                   # Dokumentasi detail Front-End & Fitur UI
+    │   └── main.ts                 
+    ├── eslint.config.ts            
+    ├── package.json                
+    ├── tsconfig.json               
+    ├── vite.config.ts              
+    └── README.md
 ```
 
 ---
@@ -115,8 +110,8 @@ spring:
     import: optional:file:.env[.properties]
   datasource:
     url: ${DB_URL:jdbc:postgresql://localhost:5432/sikopdes}
-    username: ${DB_USERNAME:sikopdes}
-    password: ${DB_PASSWORD:sikopdes}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 ```
 Berkas `.env` diletakkan di direktori root backend (`sikopdes-2406351024-be/.env`):
 ```properties
