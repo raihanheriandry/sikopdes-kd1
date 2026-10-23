@@ -4,7 +4,6 @@ Repositori ini merupakan implementasi back-end untuk **SIKopDes (Sistem Informas
 
 - **Nama**: Raihan Maulana Heriandry
 - **NPM**: 2406351024
-- **Mata Kuliah**: Arsitektur Perangkat Lunak Terintegrasi (APAP) - Gasal 2026/2027
 
 ---
 
