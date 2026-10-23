@@ -1,0 +1,81 @@
+# =========================
+# BACKEND (Java / Gradle)
+# =========================
+
+sikopdes-240631024-be/HELP.md
+sikopdes-240631024-be/.gradle/
+sikopdes-240631024-be/.env
+sikopdes-240631024-be/build/
+
+# STS / Eclipse
+sikopdes-240631024-be/.apt_generated/
+sikopdes-240631024-be/.classpath
+sikopdes-240631024-be/.factorypath
+sikopdes-240631024-be/.project
+sikopdes-240631024-be/.settings/
+sikopdes-240631024-be/.springBeans
+sikopdes-240631024-be/.sts4-cache/
+sikopdes-240631024-be/bin/
+
+# IntelliJ IDEA
+sikopdes-240631024-be/.idea/
+sikopdes-240631024-be/*.iws
+sikopdes-240631024-be/*.iml
+sikopdes-240631024-be/*.ipr
+sikopdes-240631024-be/out/
+
+# NetBeans
+sikopdes-240631024-be/nbproject/private/
+sikopdes-240631024-be/nbbuild/
+sikopdes-240631024-be/dist/
+sikopdes-240631024-be/nbdist/
+sikopdes-240631024-be/.nb-gradle/
+
+# VS Code
+sikopdes-240631024-be/.vscode/
+
+
+# =========================
+# FRONTEND (Vue / Vite)
+# =========================
+
+sikopdes-240631024-fe/logs/
+sikopdes-240631024-fe/*.log
+sikopdes-240631024-fe/node_modules/
+sikopdes-240631024-fe/.DS_Store
+sikopdes-240631024-fe/dist/
+sikopdes-240631024-fe/dist-ssr/
+sikopdes-240631024-fe/coverage/
+sikopdes-240631024-fe/*.local
+
+# Editor
+sikopdes-240631024-fe/.vscode/*
+!sikopdes-240631024-fe/.vscode/extensions.json
+sikopdes-240631024-fe/.idea/
+
+sikopdes-240631024-fe/*.suo
+sikopdes-240631024-fe/*.ntvs*
+sikopdes-240631024-fe/*.njsproj
+sikopdes-240631024-fe/*.sln
+sikopdes-240631024-fe/*.sw?
+
+sikopdes-240631024-fe/*.tsbuildinfo
+sikopdes-240631024-fe/.eslintcache
+
+# Cypress
+sikopdes-240631024-fe/cypress/videos/
+sikopdes-240631024-fe/cypress/screenshots/
+
+# Vitest
+sikopdes-240631024-fe/__screenshots__/
+
+# Vite
+sikopdes-240631024-fe/*.timestamp-*-*.mjs
+
+
+# =========================
+# ROOT PROJECT
+# =========================
+
+.DS_Store
+Thumbs.db
