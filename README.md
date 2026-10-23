@@ -48,7 +48,7 @@ flowchart LR
 ## 📂 Struktur Repositori
 
 ```
-sikopdes-2406351024/
+sikopdes-kd1/
 ├── docker-compose.yaml             # container PostgreSQL 16
 ├── README.md                       # Dokumentasi utama proyek tingkat root
 │
